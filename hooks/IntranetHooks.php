@@ -1,5 +1,5 @@
 <?php
-namespace Coxis\App\Intranet\Hooks;
+namespace App\Intranet\Hooks;
 
 class IntranetHooks extends \Coxis\Hook\HooksContainer {
 	/**

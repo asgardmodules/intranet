@@ -1,5 +1,5 @@
 <?php
-namespace Coxis\App\Intranet\Controllers;
+namespace App\Intranet\Controllers;
 
 class IntranetController extends \Coxis\Core\Controller {
 	/**
