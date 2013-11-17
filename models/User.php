@@ -1,5 +1,5 @@
 <?php
-namespace App\Intranet\Models;
+namespace Coxis\Intranet\Models;
 
 class User extends \Coxis\Core\Model {
 	public static $properties = array(

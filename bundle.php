@@ -1,5 +1,5 @@
 <?php
-namespace App\Intranet;
+namespace Coxis\Intranet;
 
 class Bundle extends \Coxis\Core\BundleLoader {
 	public function run() {
