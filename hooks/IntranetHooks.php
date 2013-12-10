@@ -6,7 +6,7 @@ class IntranetHooks extends \Coxis\Hook\HooksContainer {
 	@Hook('start')
 	*/
 	public function start() {
-		Auth::attemptRemember();
+		\Coxis\Intranet\Libs\Auth::attemptRemember();
 	}
 
 	/**

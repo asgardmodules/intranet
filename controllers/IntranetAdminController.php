@@ -3,7 +3,7 @@
 @Prefix('admin/users')
 */
 class IntranetAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'user';
+	static $_model = 'Coxis\Intranet\Models\User';
 	static $_models = 'users';
 
 	function __construct() {
