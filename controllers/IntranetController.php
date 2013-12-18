@@ -7,7 +7,7 @@ class IntranetController extends \Coxis\Core\Controller {
 	*/
 	public function registerAction($request) {
 		$user = new User;
-		$this->form = new ModelForm($user);
+		$this->form = new EntityForm($user);
 		if($this->form->isSent()) {
 			try {
 				$this->form->save();
@@ -120,7 +120,7 @@ class IntranetController extends \Coxis\Core\Controller {
 	*/
 	public function profileAction($request) {
 		Auth::check();
-		$this->form = new ModelForm(Auth::user());
+		$this->form = new EntityForm(Auth::user());
 		if($this->form->isSent()) {
 			try {
 				$this->form->save();

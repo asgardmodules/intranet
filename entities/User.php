@@ -1,7 +1,7 @@
 <?php
-namespace Coxis\Intranet\Models;
+namespace Coxis\Intranet\Entities;
 
-class User extends \Coxis\Core\Model {
+class User extends \Coxis\Core\Entity {
 	public static $properties = array(
 		'username' => array(
 			'unique'	=>	true,

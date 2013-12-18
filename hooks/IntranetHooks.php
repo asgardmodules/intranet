@@ -5,14 +5,14 @@ class IntranetHooks extends \Coxis\Hook\HooksContainer {
 	/**
 	@Hook('start')
 	*/
-	public function start() {
+	public static function start($chain) {
 		\Coxis\Intranet\Libs\Auth::attemptRemember();
 	}
 
 	/**
 	@Hook('exception_Coxis\Auth\NotAuthenticatedException')
 	*/
-	public function NotAuthenticatedException($exception) {
+	public static function NotAuthenticatedException($chain, $exception) {
 		\Response::setCode(401);
 		return 'You must be authenticated';
 	}

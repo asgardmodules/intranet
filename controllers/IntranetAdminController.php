@@ -2,9 +2,9 @@
 /**
 @Prefix('admin/users')
 */
-class IntranetAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'Coxis\Intranet\Models\User';
-	static $_models = 'users';
+class IntranetAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Coxis\Intranet\Entities\User';
+	static $_entities = 'users';
 
 	function __construct() {
 		$this->_messages = array(
@@ -17,8 +17,8 @@ class IntranetAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminCon
 		parent::__construct();
 	}
 	
-	public function formConfigure($model) {
-		$form = new \Coxis\Admin\Libs\Form\AdminModelForm($model, $this);
+	public function formConfigure($entity) {
+		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}
