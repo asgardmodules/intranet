@@ -23,7 +23,7 @@ class Auth {
 	}
 
 	public static function attemptRemember() {
-		if(\Cookie::has('remember')) {
+		if(\Coxis\Core\App::get('cookie')->has('remember')) {
 			$user = User::where(array('SHA1(CONCAT(\''.\Config::get('salt').'\', id))=\''.\Cookie::get('remember').'\''))->first();
 			if($user)
 				static::connect($user->id);
@@ -33,16 +33,16 @@ class Auth {
 	}
 
 	public static function remember($id) {
-		\Cookie::set('remember', static::hash($id));
+		\Coxis\Core\App::get('cookie')->set('remember', static::hash($id));
 	}
 
 	public static function connect($id) {
-		\Session::set(array('auth', 'id'), $id);
+		\Coxis\Core\App::get('session')->set(array('auth', 'id'), $id);
 	}
 
 	public static function disconnect() {
-		\Session::remove(array('auth', 'id'));
-		\Cookie::remove('remember');
+		\Coxis\Core\App::get('session')->remove(array('auth', 'id'));
+		\Coxis\Core\App::get('cookie')->remove('remember');
 	}
 
 	public static function user() {

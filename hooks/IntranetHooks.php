@@ -13,7 +13,7 @@ class IntranetHooks extends \Coxis\Hook\HooksContainer {
 	@Hook('exception_Coxis\Auth\NotAuthenticatedException')
 	*/
 	public static function NotAuthenticatedException($chain, $exception) {
-		\Response::setCode(401);
+		\Coxis\Core\App::get('response')->setCode(401);
 		return 'You must be authenticated';
 	}
 }
