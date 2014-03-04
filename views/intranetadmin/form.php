@@ -10,7 +10,7 @@
 					<a href="<?php echo !$user->isNew() ? $this->url_for('edit', array('id'=>$user->id)):$this->url_for('new') ?>">
 					<?php echo !$user->isNew() ? $user:__('New') ?>
 					</a></p>
-					<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
+					<?php \Asgard\Core\Asgard\Core\App::get('flash')->showAll() ?>
 					
 					<?php
 					$form->open();

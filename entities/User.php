@@ -1,7 +1,7 @@
 <?php
-namespace Coxis\Intranet\Entities;
+namespace Asgard\Intranet\Entities;
 
-class User extends \Coxis\Core\Entity {
+class User extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'username' => array(
 			'unique'	=>	true,

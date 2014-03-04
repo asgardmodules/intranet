@@ -2,8 +2,8 @@
 /**
 @Prefix('admin/users')
 */
-class IntranetAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Coxis\Intranet\Entities\User';
+class IntranetAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Asgard\Intranet\Entities\User';
 	static $_entities = 'users';
 
 	function __construct() {
@@ -18,7 +18,7 @@ class IntranetAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminCo
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}

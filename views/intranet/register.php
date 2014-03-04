@@ -1,5 +1,5 @@
 <?php
-\Coxis\Core\App::get('flash')->showAll();
+\Asgard\Core\App::get('flash')->showAll();
 $form->open();
 echo $form->username->label().$form->username->def().'<br>';
 echo $form->password->label().$form->password->password().'<br>';

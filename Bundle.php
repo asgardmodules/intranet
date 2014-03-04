@@ -1,10 +1,10 @@
 <?php
-namespace Coxis\Intranet;
+namespace Asgard\Intranet;
 
-class Bundle extends \Coxis\Core\BundleLoader {
+class Bundle extends \Asgard\Core\BundleLoader {
 	public function run() {
-		\Coxis\Admin\Libs\AdminMenu::instance()->menu[0]['childs'][] = array('label' => __('Users'), 'link' => 'users');
-		\Coxis\Admin\Libs\AdminMenu::instance()->home[] = array('img'=>\Coxis\Core\Facades\Coxis\Core\App::get('url')->to('intranet/icon.svg'), 'link'=>'users', 'title' => __('Users'), 'description' => __('Manage your users'));
+		\Asgard\Admin\Libs\AdminMenu::instance()->menu[0]['childs'][] = array('label' => __('Users'), 'link' => 'users');
+		\Asgard\Admin\Libs\AdminMenu::instance()->home[] = array('img'=>\Asgard\Core\Facades\Asgard\Core\App::get('url')->to('intranet/icon.svg'), 'link'=>'users', 'title' => __('Users'), 'description' => __('Manage your users'));
 		parent::run();
 	}
 }

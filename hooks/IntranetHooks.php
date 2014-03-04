@@ -1,19 +1,19 @@
 <?php
-namespace Coxis\Intranet\Hooks;
+namespace Asgard\Intranet\Hooks;
 
-class IntranetHooks extends \Coxis\Hook\HooksContainer {
+class IntranetHooks extends \Asgard\Hook\HooksContainer {
 	/**
 	@Hook('start')
 	*/
 	public static function start($chain) {
-		\Coxis\Intranet\Libs\Auth::attemptRemember();
+		\Asgard\Intranet\Libs\Auth::attemptRemember();
 	}
 
 	/**
-	@Hook('exception_Coxis\Auth\NotAuthenticatedException')
+	@Hook('exception_Asgard\Auth\NotAuthenticatedException')
 	*/
 	public static function NotAuthenticatedException($chain, $exception) {
-		\Coxis\Core\App::get('response')->setCode(401);
+		\Asgard\Core\App::get('response')->setCode(401);
 		return 'You must be authenticated';
 	}
 }
