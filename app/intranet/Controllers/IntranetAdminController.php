@@ -2,7 +2,7 @@
 /**
 @Prefix('admin/users')
 */
-class IntranetAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+class IntranetAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
 	static $_entity = 'Asgard\Intranet\Entities\User';
 	static $_entities = 'users';
 
@@ -18,7 +18,7 @@ class IntranetAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminC
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \App\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}
