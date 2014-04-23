@@ -24,7 +24,7 @@ class Auth {
 
 	public static function attemptRemember() {
 		if(\Asgard\Core\App::get('cookie')->has('remember')) {
-			$user = User::where(array('SHA1(CONCAT(\''.\Config::get('salt').'\', id))=\''.\Cookie::get('remember').'\''))->first();
+			$user = User::where(array('SHA1(CONCAT(\''.\Config::get('key').'\', id))=\''.\Cookie::get('remember').'\''))->first();
 			if($user)
 				static::connect($user->id);
 			return (boolean)$user;
@@ -50,6 +50,6 @@ class Auth {
 	}
 
 	public static function hash($val) {
-		return sha1(Config::get('salt').$val);
+		return sha1(Config::get('key').$val);
 	}
 }

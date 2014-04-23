@@ -30,10 +30,10 @@ class User extends \Asgard\Core\Entity {
 	}
 
 	public function getUID() {
-		return sha1(\Value::val('salt').$this->id);
+		return sha1(\Value::val('key').$this->id);
 	}
 
 	public static function getByUID($uid) {
-		return static::where(array('SHA1(CONCAT(\''.\Cookie::get('salt').'\', id))=\''.$uid.'\''))->first();
+		return static::where(array('SHA1(CONCAT(\''.\Cookie::get('key').'\', id))=\''.$uid.'\''))->first();
 	}
 }

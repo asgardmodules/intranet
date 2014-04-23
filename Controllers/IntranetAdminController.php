@@ -6,7 +6,7 @@ class IntranetAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminC
 	static $_entity = 'Asgard\Intranet\Entities\User';
 	static $_entities = 'users';
 
-	function __construct() {
+	public function __construct() {
 		$this->_messages = array(
 			'modified'			=>	__('User modified with success.'),
 			'created'			=>	__('User created with success.'),
