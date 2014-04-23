@@ -6,7 +6,7 @@ class IntranetHooks extends \Asgard\Hook\HooksContainer {
 	@Hook('start')
 	*/
 	public static function start($chain) {
-		\Asgard\Intranet\Libs\Auth::attemptRemember();
+		\App\Intranet\Libs\Auth::attemptRemember();
 	}
 
 	/**
