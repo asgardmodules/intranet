@@ -3,8 +3,8 @@
 @Prefix('admin/users')
 */
 class IntranetAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Asgard\Intranet\Entities\User';
-	static $_entities = 'users';
+	protected $_entity = 'Asgard\Intranet\Entities\User';
+	protected $_entities = 'users';
 
 	public function __construct() {
 		$this->_messages = array(
